@@ -1,0 +1,30 @@
+server:
+  port: 8888
+spring:
+  application:
+    name: Cambium-Learning
+  datasource:
+    driverClassName: org.h2.Driver
+    username: cambium
+    password: 'cambium'
+    url: jdbc:h2:mem:testdb
+  h2:
+    console:
+      enabled: true
+      path: /h2-console
+  jpa:
+    database-platform: org.hibernate.dialect.H2Dialect
+    hibernate:
+      ddl-auto: create-drop
+    properties:
+      hibernate:
+        show_sql: true
+
+  mvc:
+    pathmatch:
+      matching-strategy: ANT_PATH_MATCHER
+
+basic:
+  auth:
+    username: user
+    password: password
